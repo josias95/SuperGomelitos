@@ -217,7 +217,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
-  foundation-rails (~> 6.4, >= 6.4.3.0)
+  foundation-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

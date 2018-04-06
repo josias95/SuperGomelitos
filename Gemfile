@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 #gema devise
 gem 'devise'
 gem 'jquery-rails'
-gem 'foundation-rails', '~> 6.4', '>= 6.4.3.0'
+gem 'foundation-rails'
 
 #agregada gema paperclip
 gem 'paperclip'

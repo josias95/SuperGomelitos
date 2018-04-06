@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Coiny|Vast+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <title>Super Gomelitos</title>
 
@@ -13,7 +15,6 @@
   </head>
 
   <body>
-
     <header class="header">
       <div data-sticky-container>
         <div class="title-bar sticky" data-sticky data-options="marginTop:0;"  style="width:100%;">
@@ -43,7 +44,6 @@
     <section class="logotipo">
       <%= image_tag("logo.jpg", :alt => "gomelitos_img", :class => "logo") %>
     </section>
-    <%= yield %>
     <ul>
       <% if user_signed_in? %>
         <li>
@@ -63,6 +63,7 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>
+    <%= yield %>
 
   </body>
 </html>
