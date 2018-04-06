@@ -1,9 +1,13 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+
+  #Esto permitira, que el evento solo se pueda crear,
+  #cuando el usuario inicia sesión
   before_action :authenticate_user!
   # GET /events
   # GET /events.json
   def index
+    #se busca al usuario en la base de datos
     @events = Event.where user_id: current_user.id
   end
 
