@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require_tree .
 //= require foundation
+//= require jquery.remotipart
 
 $(function(){ $(document).foundation(); });
 
