@@ -23,6 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'jquery-rails'
 gem 'foundation-rails'
+gem "font-awesome-rails"
 
 #agregada gema paperclip
 gem 'paperclip'

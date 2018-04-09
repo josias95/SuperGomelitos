@@ -2,25 +2,11 @@
 	<p> Bienvenido a SuperGomelitos <%= current_user.name %></p>
 <% else %>
 <% end -%>
-<div class="row text-center nosotros_title">
-	<div class="columns large-12">
-		<h4>SOBRE NOSOTROS</h4>
-	</div>
-</div>
-<div class="row nosotros">
-	<div class="columns large-2"><%= image_tag("robin.jpg", :alt => "robin_img", :class => "robin") %></div>
-	<div class="columns large-10">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a metus at arcu scelerisque interdum eu sed enim. Donec et nibh condimentum, viverra tortor non, ultricies massa. Curabitur porttitor laoreet mi, at venenatis felis congue blandit. Vestibulum sodales dapibus gravida. Nunc vitae urna sed libero volutpat vulputate. Donec maximus gravida ex quis dignissim. Sed sollicitudin tristique facilisis. Mauris finibus ultricies lacus et tristique. Integer volutpat nisl sed orci lacinia, sed euismod nisl consectetur.
-		</p> 
-		<br> 
-		<p>Phasellus sagittis efficitur magna, porta scelerisque metus pharetra pretium. In imperdiet rhoncus turpis. Duis id massa lectus. Nunc dignissim, nunc pretium vehicula eleifend, neque velit consequat dolor, eget blandit tortor nisi id mauris. Nam nec ultricies elit.
-		</p>
-	</div>
-</div>
+
 <div class="row text-center nuestro_trabajo">
 	<div class="columns large-12"><h4>NUESTRO TRABAJO</h4></div>
 </div>
-<div class="row orbit">
+<div class="row align-center orbit">
 	<div class="columns large-12 carrousel_peinados">
 		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
 			  <div class="orbit-wrapper">
@@ -62,26 +48,51 @@
 			    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
 			  </nav>
 		</div>
-			<%= image_tag("hombreAraña.jpg", :alt => "hombreAraña_img", :class => "hombreAraña") %>
+			<%= image_tag("hombreAraña.png", :alt => "hombreAraña_img", :class => "hombreAraña") %>
 	</div>
 </div>  
-	<div class="row text-center">
-		<div class="columns large-12">
-			<h4>UBICANOS</h4>
-		</div>
-	</div>
 
-	<div class="row mapa">
-		<div class="columns large-12">
-			<iframe
-			  width="1200"
-			  height="450"
-			  frameborder="0" style="border:0"
-			  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyB6QfZ00cuH16l1eW2EH7_xhX0Oy9O7vlU
-			    &location=4.5205568,-75.6986902
-			    &heading=-20
-			    &pitch=0
-			    &fov=50" allowfullscreen>
-			</iframe>
-		</div>
+
+<div class="row text-center nosotros_title">
+	<div class="columns large-12">
+		<h4>SOBRE NOSOTROS</h4>
 	</div>
+</div>
+<div class="row nosotros">
+	<div class="columns large-2"><%= image_tag("robin.jpg", :alt => "robin_img", :class => "robin") %></div>
+	<div class="columns large-10">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a metus at arcu scelerisque interdum eu sed enim. Donec et nibh condimentum, viverra tortor non, ultricies massa. Curabitur porttitor laoreet mi, at venenatis felis congue blandit. Vestibulum sodales dapibus gravida. Nunc vitae urna sed libero volutpat vulputate. Donec maximus gravida ex quis dignissim. Sed sollicitudin tristique facilisis. Mauris finibus ultricies lacus et tristique. Integer volutpat nisl sed orci lacinia, sed euismod nisl consectetur.
+		</p> 
+		<br> 
+		<p>Phasellus sagittis efficitur magna, porta scelerisque metus pharetra pretium. In imperdiet rhoncus turpis. Duis id massa lectus. Nunc dignissim, nunc pretium vehicula eleifend, neque velit consequat dolor, eget blandit tortor nisi id mauris. Nam nec ultricies elit.
+		</p>
+	</div>
+</div>
+
+<div class="row align-bottom ubicanos">
+	<div class="columns text-center large-4">
+		<%= image_tag("flash.jpg", :alt => "flash_img", :class => "flash") %>
+	</div>
+	<div class="columns text-center large-4">
+		<h4>UBÍCANOS</h4>
+	</div>
+	<div class="columns text-center large-4">
+		<%= image_tag("flash.jpg", :alt => "flash_img", :class => "flash1") %>
+	</div>
+</div>
+
+<div class="row mapa">
+	<div class="columns text-center large-12">
+		<iframe
+		  width="800"
+		  height="430"
+		  border="solid 1px red"
+		  frameborder="0" style="border:0"
+		  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyB6QfZ00cuH16l1eW2EH7_xhX0Oy9O7vlU
+		    &location=4.5205568,-75.6986902
+		    &heading=-20
+		    &pitch=0
+		    &fov=50" allowfullscreen>
+		</iframe>
+	</div>
+</div>
