@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class="field">
+      <%= image_tag @event.avatar.url(:medium) %>
+  </div>
+
 <p>
   <strong>Name:</strong>
   <%= @event.name %>
