@@ -18,10 +18,10 @@
     <header class="header">
       <div data-sticky-container>
         <div class="title-bar sticky" data-sticky data-options="marginTop:0;"  style="width:100%;">
-          <div class="title-bar-left"><h1>SUPER GOMELITOS</h1></div>
+          <div class="title-bar-left"><h2>SUPER GOMELITOS</h2></div>
           <div class="title-bar-right">
-            <ul class="menu">
-              <li>
+            <ul class="menu dropdown" data-dropdown-menu>
+              <li class="is-active">
                 <a href="#">Inicio</a>
               </li>
               <li> 
@@ -31,11 +31,28 @@
                 <%= link_to 'Eventos', events_path %>
               </li>
               <li> 
-                <a href="#">Separa tu cita</a>
+                <a href="#">Cita</a>
               </li>
               <li> 
                 <a href="#">Contacto</a>
               </li>
+              <li> 
+                <a href="#">Admin</a>
+                <ul id="submenu-header">
+                  <% if user_signed_in? %>
+                    <li>
+                      <%= link_to 'Editar', edit_user_registration_path %>
+                    </li>
+                    <li> 
+                      <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
+                    </li>
+                  <% else %>
+                    <li> 
+                      <%= link_to 'Iniciar sesion', new_user_session_path %>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>            
             </ul>
           </div>
         </div>
@@ -44,25 +61,6 @@
     <section class="logotipo">
       <%= image_tag("logo.jpg", :alt => "gomelitos_img", :class => "logo") %>
     </section>
-    <ul>
-      <% if user_signed_in? %>
-        <li>
-          <%= link_to 'Cerrar sesion', destroy_user_session_path, method: :delete %>
-        </li>
-        <li>
-          <%= link_to 'Editar perfil', edit_user_registration_path %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to 'Iniciar sesion', new_user_session_path %>
-        </li> 
-      <% end %>
-    </ul>
-
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
     <%= yield %>
     <footer class="columns large-12  footer">
       <div class="row  text-center foot">
