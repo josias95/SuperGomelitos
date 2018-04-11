@@ -1,16 +1,37 @@
-<h2>Forgot your password?</h2>
+<div class="row align-middle">
+	<div class="columns text-right large-4 icono_recuperar" style="padding-right: 0px; color: #1779ba;">
+		<i class="fa fa-expeditedssl fa-3x"></i>
+	</div>
+	<div class="columns large-4 recuperar">
+		<h2>Recuperación</h2>
+	</div>
+
+</div>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field" style="margin: 20px auto;">
+  	<div class="row">
+  		<div class="columns text-right large-4 icono_email";">
+  			<i class="fa fa-envelope fa-2x"></i>
+  		</div>
+  		<div class="columns large-4" style="padding-left: 15px;">
+  			<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite su email" %>
+  		</div>
+  	</div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+	<div class="actions">
+		<div class="row align-center">
+			<div class="columns large-2">
+				<%= f.submit "Enviar instrucciones", :class => "hollow button" %>
+			</div>
+		</div>
+	</div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+	<div class="otros_login">
+		<%= render "devise/shared/links" %>		
+	</div>
+

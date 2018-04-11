@@ -26,3 +26,23 @@
 .boton_login {
 	width: 150px;
 }
+
+.registrate h2, .recuperar h2 {
+	color: #1779ba;
+	font-family: 'Coiny', cursive;
+	font-size: 50px;
+	margin:50px auto;
+}
+
+.registrate {
+	padding-left: 0px;
+}
+
+.recuperar {
+	padding-left: 20px;
+}
+
+.icono_registro, .icono_recuperar {
+	padding-top: 15px;
+	padding-right: 10px;
+}

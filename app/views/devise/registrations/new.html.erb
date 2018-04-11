@@ -1,5 +1,8 @@
-<div class="row">
-    <div class="columns text-center large-12">
+<div class="row align-middle">
+    <div class="columns text-right large-5 icono_registro">
+        <i class="fa fa-address-card fa-3x" style="color: #1779ba;"></i>
+    </div>
+    <div class="columns large-3 registrate">
         <h2>Regístrate</h2>
     </div>
 </div>
@@ -19,7 +22,7 @@
         </div>
     </div>
 
-    <div class="field">
+    <div class="field" style="margin: 10px auto;">
         <div class="row">
             <div class="columns text-right large-4 icono_email">
                 <i class="fa fa-envelope fa-2x"></i>
@@ -41,7 +44,7 @@
         </div>
     </div>
 
-    <div class="field">
+    <div class="field" style="margin: 10px auto;">
         <div class="row">
             <div class="columns text-right large-4 icono_contraseña">
                 <i class="fa fa-lock fa-2x"></i>
@@ -53,9 +56,9 @@
     </div>
 
     <div class="field">
-        <div class="row">
-            <div class="columns text-center large-12">
-                <%= f.file_field :avatar %>  
+        <div class="row align-center">
+            <div class="columns text-center large-4">
+                <%= f.file_field :avatar, :class => "button expanded" %>  
             </div>
         </div>
     </div>
@@ -64,10 +67,12 @@
     <div class="actions">
         <div class="row">
             <div class="columns text-center large-12">
-                <%= f.submit "Sign up", :class => "hollow button" %>  
+                <%= f.submit "Registrar", :class => "hollow button" %>  
             </div>
         </div>
     </div>
     <% end %>
-
-    <%= render "devise/shared/links" %>
+    <div class="otros_login">
+        <%= render "devise/shared/links" %>
+    </div>
+    
