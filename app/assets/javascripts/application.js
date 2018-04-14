@@ -17,6 +17,10 @@
 //= require_tree .
 //= require foundation
 //= require jquery.remotipart
+$(document).on("turbolinks:load", function(){
+	$(function(){ $(document).foundation(); });
 
-$(function(){ $(document).foundation(); });
+});
+
+
 

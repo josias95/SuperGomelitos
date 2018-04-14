@@ -46,8 +46,13 @@
 }
 
 .menu li a:hover {
-	color: #1468a0;
+	color: yellow;
 }
+
+.dropdown.menu .is-active > a {
+	color: yellow;
+}
+
 
 #submenu-header{
 	min-width: 130px;
@@ -124,6 +129,10 @@
 
 .mapa {
 	margin-bottom: 100px;
+}
+
+.contenido {
+
 }
 
 .footer {

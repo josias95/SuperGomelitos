@@ -15,67 +15,10 @@
   </head>
 
   <body>
-    <header class="header">
-      <div data-sticky-container>
-        <div class="title-bar sticky" data-sticky data-options="marginTop:0;"  style="width:100%;">
-          <div class="title-bar-left"><h1>SUPER GOMELITOS</h1></div>
-          <div class="title-bar-right">
-            <ul class="menu dropdown" data-dropdown-menu>
-              <li class="is-active">
-                <a href="#">Inicio</a>
-              </li>
-              <li> 
-                <a href="#">Servicios</a>
-              </li>
-              <li> 
-                <%= link_to 'Eventos', events_path %>
-              </li>
-              <li> 
-                <a href="#">Cita</a>
-              </li>
-              <li> 
-                <a href="#">Contacto</a>
-              </li>
-              <li> 
-                <a href="#">Admin</a>
-                <ul id="submenu-header">
-                  <% if user_signed_in? %>
-                    <li>
-                      <%= link_to 'Editar', edit_user_registration_path %>
-                    </li>
-                    <li> 
-                      <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
-                    </li>
-                  <% else %>
-                    <li> 
-                      <%= link_to 'Iniciar sesion', new_user_session_path %>
-                    </li>
-                  <% end %>
-                </ul>
-              </li>            
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="logotipo">
-      <%= image_tag("logo.jpg", :alt => "gomelitos_img", :class => "logo") %>
-    </section>
-    <%= yield %>
-    <footer class="columns large-12  footer">
-      <div class="row  text-center foot">
-        <div class="columns large-12">
-          <i class="fa fa-envelope"></i>
-          <span>   supergomelitos@gmail.com</span>
-        </div>
-        <div class="columns large-12">
-          <i class="fa fa-phone"></i>
-          <span>   3187636923</span>
-        </div>
-        <div class="columns large-12 copyright">
-          <i class="fa fa-copyright"></i>
-          <span>2018 Super Gomelitos</span>
-        </div>
-    </footer>   
+    <%= render :partial => 'layouts/header' %>
+    <div class="contenido">
+      <%= yield %>
+    </div>
+    <%= render :partial => 'layouts/footer' %>       
   </body>
 </html>
