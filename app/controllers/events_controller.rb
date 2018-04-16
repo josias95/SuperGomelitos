@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   #Esto permitira, que el evento solo se pueda crear,
   #cuando el usuario inicia sesión
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   # GET /events
   # GET /events.json
   def index
