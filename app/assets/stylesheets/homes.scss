@@ -6,6 +6,7 @@
 	width:100%;
 	height:500px;
 	opacity: .8;
+	margin-bottom: 100px;
 }
 
 .header{
@@ -72,7 +73,7 @@
 .nosotros_title h4 {
 	font-family: 'Coiny', cursive;
 	font-size: xx-large;
-	margin-top: 400px;
+	margin-top: 300px;
 	margin-bottom: 50px;
 	color: green;
 	-webkit-text-stroke: 1px yellow;
@@ -87,8 +88,8 @@
 }
 
 .peinado1, .peinado2,.peinado3, .peinado4 {
-	width: 1170px;
-	height: 500px;
+	width: 800px;
+	height: 430px;
 }
 
 .nuestro_trabajo {
@@ -98,7 +99,7 @@
 .nuestro_trabajo h4 {
 	font-family: 'Coiny', cursive;
 	font-size: xx-large;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	color: red;
 	-webkit-text-stroke: 2px black;
 }
@@ -107,12 +108,13 @@
 	width: 80px;
 	height: 200px;
 	position: relative;
-	bottom:553px;
+	bottom:425px;
 	left: 50px;
 }
 
-.carrousel_peinados {
-	height: 300px;
+.carrousel_peinados, .orbit {
+	height: 430px;
+	width: 800px;
 }
 
 .ubicanos {

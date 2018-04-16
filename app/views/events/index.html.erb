@@ -1,33 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="row align-bottom contenedor_eventos">
+    <div class="columns large-4 batimovil_img">
+        <%= image_tag("batimovil.jpg", :alt => "batimovil_img", :class => "flipH batimovil") %>
+    </div>
+    <div class="columns  text-center large-4 title_eventos">
+        <h1>EVENTOS</h1>
+    </div>
+    <div class="columns text-right large-4 batimovil_img">
+        <%= image_tag("batimovil.jpg", :alt => "batimovil_img", :class => "batimovil") %>
+    </div>
+</div>
 
-<h1>Events</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="row align-center">    
+        <% @events.each do |event| %>
+            <div class="columns large-3 eventos">
+                <div class="row">
+                    <div class="columns text-center large-12 nombre_evento">
+                        <%= event.name %>
+                    </div>
+                    <div class="columns text-center large-12 img_eventos">
+                        <%= image_tag("robin.jpg", :alt => "robin_img", :class => "robin") %>
+                    </div>
+                    <div class="columns text-center large-12 descripcion_evento">
+                        <%= event.description %>
+                    </div>
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.description %></td>
-        <td><%= link_to 'Show', event %></td>
-
-        <% if user_signed_in? %>
-          <td><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <% if user_signed_in? %>
+                    <div class="columns text-center large-6">
+                        <%= link_to 'Editar', edit_event_path(event), :class => "clear button " %>
+                    </div>
+                    <div class="columns text-center large-6">
+                        <%= link_to 'Eliminar', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "clear button alert" %>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    </div>
+        
+        
 
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Event', new_event_path %>
-<% end %>
+        
+            
+<div class="row">
+    <div class="columns text-center large-12 nuevo_evento">
+        <% if user_signed_in? %>
+            <%= link_to 'Nuevo evento', new_event_path, :class => "hollow button large" %>
+        <% end %>
+    </div>
+</div>
+

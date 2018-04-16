@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :imagen %>
-    <%= form.file_field :avatar %>
-  </div>
+    <div class="field">
+        <div class="row align-center nombre_nuevo_evento">
+            <div class="columns large-5">
+                <%= form.text_field :name, id: :event_name, placeholder: "Nombre del evento" %>
+            </div>
+        </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :event_name %>
-  </div>
+    <div class="field">
+        <div class="row align-center descripcion_nuevo_evento">
+            <div class="columns large-5">
+                <%= form.text_field :description, id: :event_description, placeholder: "Descripción del evento" %>
+            </div>
+        </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :event_description %>
-  </div>
+    <div class="field">
+        <div class="row align-center imagen_nuevo_evento">
+            <div class="columns large-4">
+                    <%= form.file_field :avatar %>
+            </div>
+        </div>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="actions">
+        <div class="row align-center boton_nuevo_evento">
+            <div class="columns text-center large-4">
+                <%= form.submit "Crear evento", :class => "button primary" %>
+            </div>
+        </div>
+    </div>
 <% end %>
