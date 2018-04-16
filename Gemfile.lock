@@ -77,6 +77,11 @@ GEM
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_girl (4.9.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
+      railties (>= 3.0.0)
     ffi (1.9.23)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
@@ -172,6 +177,14 @@ GEM
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
+    rspec-rails (3.7.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+      rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
@@ -234,6 +247,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  factory_girl_rails
   font-awesome-rails (~> 4.7, >= 4.7.0.2)
   foundation-rails
   jbuilder (~> 2.5)
@@ -245,6 +259,7 @@ DEPENDENCIES
   rails (~> 5.1.5)
   remotipart (~> 1.2)
   rspec (~> 3.7)
+  rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
