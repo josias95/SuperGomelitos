@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409155308) do
+ActiveRecord::Schema.define(version: 20180419061035) do
 
-  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20180409155308) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "nombre"
+    t.text "descripcion"
+    t.integer "valor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
