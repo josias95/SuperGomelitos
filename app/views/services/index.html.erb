@@ -1,35 +1,120 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Services</h1>
-
-<% if @services.empty? %>
-  <h3>No hay servicios creados</h3>
-<% else %>
-  <table>
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Descripcion</th>
-        <th>Valor</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @services.each do |service| %>
-        <tr>
-          <td><%= service.nombre %></td>
-          <td><%= service.descripcion %></td>
-          <td><%= service.valor %></td>
-          <td><%= link_to 'Show', service %></td>
-          <td><%= link_to 'Edit', edit_service_path(service) %></td>
-          <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-<% end %>
+<section class="categoria_servicios">
+    <h3 class="text-center">Seleccione una categoria</h3>
+    <ul class="tabs text-center" data-tabs id="servicios-tabs">
+        <li class="tabs-title is-active">
+            <a href="#panelBebes"  aria-selected="true">Bebes</a>
+        </li>
+        <li class="tabs-title">
+            <a  data-tabs-target="panelNiños" href="#panelNiños">Niños</a>
+        </li>
+        <li class="tabs-title">
+            <a href="#panelAdultos">Adultos</a>
+        </li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="servicios-tabs">
+        <div class="tabs-panel is-active" id="panelBebes">
+            <% if @services.empty? %>
+                <h3>No hay servicios creados</h3>
+            <% else %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Valor</th>
+                            <th colspan="3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @services.each do |service| %>
+                            <% if service.categoria=="Bebes"%>
+                                <tr>
+                                    <td><%= service.nombre %></td>
+                                    <td><%= service.descripcion %></td>
+                                    <td><%= service.valor %></td>
+                                    <% if user_signed_in? %>
+                                        <td><%= link_to 'Show', service %></td>
+                                        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+                                        <td>
+                                            <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+                                                
+                                        </td>
+                                    <% end -%>
+                                </tr>
+                            <% end -%>
+                        <% end %>
+                    </tbody>
+                </table>
+            <% end %>
+        </div>
+        <div class="tabs-panel" id="panelNiños">
+            <% if @services.empty? %>
+                <h3>No hay servicios creados</h3>
+            <% else %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Valor</th>
+                            <th colspan="3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @services.each do |service| %>
+                            <% if service.categoria=="Niños"%>
+                                <tr>
+                                    <td><%= service.nombre %></td>
+                                    <td><%= service.descripcion %></td>
+                                    <td><%= service.valor %></td>
+                                    <% if user_signed_in? %>
+                                        <td><%= link_to 'Show', service %></td>
+                                        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+                                        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                    <% end -%>
+                                </tr>
+                            <% end -%>
+                        <% end %>
+                    </tbody>
+                </table>
+            <% end %>
+        </div>
+        <div class="tabs-panel" id="panelAdultos">
+            <% if @services.empty? %>
+                <h3>No hay servicios creados</h3>
+            <% else %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Valor</th>
+                            <th colspan="3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @services.each do |service| %>
+                            <% if service.categoria=="Adultos"%>
+                                <tr>
+                                    <td><%= service.nombre %></td>
+                                    <td><%= service.descripcion %></td>
+                                    <td><%= service.valor %></td>
+                                    <% if user_signed_in? %>
+                                        <td><%= link_to 'Show', service %></td>
+                                        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+                                        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                    <% end -%>
+                                </tr>
+                            <% end -%>
+                        <% end %>
+                    </tbody>
+                </table>
+            <% end %>
+        </div>
+    </div>
+</section>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Service', new_service_path %>
+<% end -%>  

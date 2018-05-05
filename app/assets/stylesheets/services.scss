@@ -1,3 +1,26 @@
 // Place all the styles related to the Services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.categoria_servicios{
+	margin-top: 30px;
+}
+
+.categoria_servicios .tabs .tabs-title a {
+	font-size: 18px;
+	border: none;
+}
+
+.categoria_servicios .tabs .tabs-title a:hover{
+	color: yellow;
+}
+
+.tabs-title {
+	display: inline-block;
+	float: none;
+}
+
+.categoria_servicios .tabs .tabs-title.is-active a {
+	background-color: white;
+	color: yellow;
+}
