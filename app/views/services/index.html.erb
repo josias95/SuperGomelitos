@@ -1,5 +1,5 @@
 <section class="categoria_servicios">
-    <h3 class="text-center">Seleccione una categoria</h3>
+    <h3 class="text-center" style="font-family: 'Coiny', cursive;">Seleccione una categoria</h3>
     <ul class="tabs text-center" data-tabs id="servicios-tabs">
         <li class="tabs-title is-active">
             <a href="#panelBebes"  aria-selected="true">Bebes</a>
@@ -16,99 +16,189 @@
             <% if @services.empty? %>
                 <h3>No hay servicios creados</h3>
             <% else %>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>Valor</th>
-                            <th colspan="3"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @services.each do |service| %>
-                            <% if service.categoria=="Bebes"%>
-                                <tr>
-                                    <td><%= service.nombre %></td>
-                                    <td><%= service.descripcion %></td>
-                                    <td><%= service.valor %></td>
+                <div class="row align-middle">
+                    <div class="columns large-3 text-right">
+                        <%= image_tag("bebeanimada.jpg", :alt => "bebes_img", :class => "bebe_animada") %>
+                    </div>
+                    <div class="columns large-6">
+                        <h5 class="text-center">Esta categoria es para Bebes entre 0 y 5 añitos</h5>
+                    </div>
+                    <div class="columns large-3">
+                        <%= image_tag("bebeanimado.jpg", :alt => "bebes_img", :class => "bebe_animado") %>
+                    </div>
+                </div>
+                <div class="row">
+                    <% @services.each do |service| %>
+                        <% if service.categoria=="Bebes"%>
+                            <div class="columns large-12 text-center servicios_bebe">
+                                <div class="row">
+                                    <div class="columns large-12 servicio_nombre">
+                                        <%= service.nombre %>
+                                    </div>
+                                    <div class="columns large-12">
+                                        <div class="row">
+                                            <div class="columns large-3">
+                                                <%= image_tag("bebes.jpg", :alt => "bebes_img", :class => "bebes") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("bebes.jpg", :alt => "bebes_img", :class => "bebes") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("bebes.jpg", :alt => "bebes_img", :class => "bebes") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("bebes.jpg", :alt => "bebes_img", :class => "bebes") %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="columns large-12 servicio_descripcion">
+                                        <%= service.descripcion %>
+                                    </div>
+                                    <div class="columns large-6 text-right" style="padding-top: 15px; color: green;">
+                                        <i class="fa fa-credit-card fa-2x"></i>
+                                    </div>
+                                    <div class="columns large-6 text-left servicio_valor">
+                                        <%= service.valor %> 
+                                    </div>
                                     <% if user_signed_in? %>
-                                        <td><%= link_to 'Show', service %></td>
-                                        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-                                        <td>
-                                            <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
-                                                
-                                        </td>
+                                        <div class="columns large-6">
+                                            <%= link_to 'Editar', edit_service_path(service), :class => "hollow button success"%>
+                                        </div>
+                                        <div class="columns large-6">
+                                            <%= link_to 'Eliminar', service, method: :delete, data: { confirm: 'Are you sure?' }, :class => "hollow button alert" %>
+                                        </div>
                                     <% end -%>
-                                </tr>
-                            <% end -%>
-                        <% end %>
-                    </tbody>
-                </table>
+                                </div>
+                            </div>
+                        <% end -%>
+                    <% end %>
+                </div>
             <% end %>
         </div>
         <div class="tabs-panel" id="panelNiños">
             <% if @services.empty? %>
                 <h3>No hay servicios creados</h3>
             <% else %>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>Valor</th>
-                            <th colspan="3"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @services.each do |service| %>
-                            <% if service.categoria=="Niños"%>
-                                <tr>
-                                    <td><%= service.nombre %></td>
-                                    <td><%= service.descripcion %></td>
-                                    <td><%= service.valor %></td>
+                <div class="row align-middle">
+                    <div class="columns large-3 text-right">
+                        <%= image_tag("niñaanimada.jpg", :alt => "niños_img", :class => "niña_animada") %>
+                    </div>
+                    <div class="columns large-6">
+                        <h5 class="text-center">Esta categoria es para Niños entre 6 y 15 años</h5>
+                    </div>
+                    <div class="columns large-3">
+                        <%= image_tag("niñoanimado.jpg", :alt => "niños_img", :class => "niño_animado") %>
+                    </div>
+                </div>
+                <div class="row">
+                    <% @services.each do |service| %>
+                        <% if service.categoria=="Bebes"%>
+                            <div class="columns large-12 text-center servicios_bebe">
+                                <div class="row">
+                                    <div class="columns large-12 servicio_nombre">
+                                        <%= service.nombre %>
+                                    </div>
+                                    <div class="columns large-12">
+                                        <div class="row">
+                                            <div class="columns large-3">
+                                                <%= image_tag("niños.jpg", :alt => "bebes_img", :class => "niños") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("niños.jpg", :alt => "bebes_img", :class => "niños") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("niños.jpg", :alt => "bebes_img", :class => "niños") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("niños.jpg", :alt => "bebes_img", :class => "niños") %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="columns large-12 servicio_descripcion">
+                                        <%= service.descripcion %>
+                                    </div>
+                                    <div class="columns large-6 text-right" style="padding-top: 15px; color: green;">
+                                        <i class="fa fa-credit-card fa-2x"></i>
+                                    </div>
+                                    <div class="columns large-6 text-left servicio_valor">
+                                        <%= service.valor %> 
+                                    </div>
                                     <% if user_signed_in? %>
-                                        <td><%= link_to 'Show', service %></td>
-                                        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-                                        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                        <div class="columns large-6">
+                                            <%= link_to 'Editar', edit_service_path(service), :class => "hollow button success"%>
+                                        </div>
+                                        <div class="columns large-6">
+                                            <%= link_to 'Eliminar', service, method: :delete, data: { confirm: 'Are you sure?' }, :class => "hollow button alert" %>
+                                        </div>
                                     <% end -%>
-                                </tr>
-                            <% end -%>
-                        <% end %>
-                    </tbody>
-                </table>
+                                </div>
+                            </div>
+                        <% end -%>
+                    <% end %>
+                </div>
             <% end %>
         </div>
         <div class="tabs-panel" id="panelAdultos">
             <% if @services.empty? %>
                 <h3>No hay servicios creados</h3>
             <% else %>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>Valor</th>
-                            <th colspan="3"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @services.each do |service| %>
-                            <% if service.categoria=="Adultos"%>
-                                <tr>
-                                    <td><%= service.nombre %></td>
-                                    <td><%= service.descripcion %></td>
-                                    <td><%= service.valor %></td>
+                <div class="row align-middle">
+                    <div class="columns large-3 text-right">
+                        <%= image_tag("adultaanimada.jpg", :alt => "bebes_img", :class => "adulta_animada") %>
+                    </div>
+                    <div class="columns large-6">
+                        <h5 class="text-center">Esta categoria es de 16 años en adelante</h5>
+                    </div>
+                    <div class="columns large-3">
+                        <%= image_tag("adultoanimado.jpg", :alt => "bebes_img", :class => "adulto_animado") %>
+                    </div>
+                </div>
+                <div class="row">
+                    <% @services.each do |service| %>
+                        <% if service.categoria=="Bebes"%>
+                            <div class="columns large-12 text-center servicios_bebe">
+                                <div class="row">
+                                    <div class="columns large-12 servicio_nombre">
+                                        <%= service.nombre %>
+                                    </div>
+                                    <div class="columns large-12">
+                                        <div class="row">
+                                            <div class="columns large-3">
+                                                <%= image_tag("adultos.jpg", :alt => "bebes_img", :class => "adultos") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("adultos.jpg", :alt => "bebes_img", :class => "adultos") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("adultos.jpg", :alt => "bebes_img", :class => "adultos") %>
+                                            </div>
+                                            <div class="columns large-3">
+                                                <%= image_tag("adultos.jpg", :alt => "bebes_img", :class => "adultos") %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="columns large-12 servicio_descripcion">
+                                        <%= service.descripcion %>
+                                    </div>
+                                    <div class="columns large-6 text-right" style="padding-top: 15px; color: green;">
+                                        <i class="fa fa-credit-card fa-2x"></i>
+                                    </div>
+                                    <div class="columns large-6 text-left servicio_valor">
+                                        <%= service.valor %> 
+                                    </div>
                                     <% if user_signed_in? %>
-                                        <td><%= link_to 'Show', service %></td>
-                                        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-                                        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                        <div class="columns large-6">
+                                            <%= link_to 'Editar', edit_service_path(service), :class => "hollow button success"%>
+                                        </div>
+                                        <div class="columns large-6">
+                                            <%= link_to 'Eliminar', service, method: :delete, data: { confirm: 'Are you sure?' }, :class => "hollow button alert" %>
+                                        </div>
                                     <% end -%>
-                                </tr>
-                            <% end -%>
-                        <% end %>
-                    </tbody>
-                </table>
+                                </div>
+                            </div>
+                        <% end -%>
+                    <% end %>
+                </div>
             <% end %>
         </div>
     </div>
