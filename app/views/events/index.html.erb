@@ -10,7 +10,11 @@
     </div>
 </div>
 
-
+<% if @events.empty? %>
+    <div class="row align-center">
+        No hay eventos
+    </div>
+<% else %>    
     <div class="row align-center">    
         <% @events.each do |event| %>
             <div class="columns large-3 eventos">
@@ -37,7 +41,7 @@
             </div>
         <% end %>
     </div>
-        
+<% end %>        
         
 
         

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="field">
+      <%= image_tag @service.avatar.url(:medium) %>
+</div>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @service.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @service.descripcion %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @service.valor %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>
