@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :categoria %>
-    <%= form.text_area :categoria, id: :service_categoria %>
+    <%= form.select :categoria, Service.categoria.keys %>
   </div>
 
   <div class="field">
