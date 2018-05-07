@@ -1,0 +1,27 @@
+<%= form_with(model: tracing, local: true) do |form| %>
+  <% if tracing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tracing.errors.count, "error") %> prohibited this tracing from being saved:</h2>
+
+      <ul>
+      <% tracing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :tracing_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.number_field :valor, id: :tracing_valor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

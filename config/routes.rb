@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tracings
   resources :services
   resources :events
   devise_for :users
