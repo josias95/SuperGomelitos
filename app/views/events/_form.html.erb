@@ -1,0 +1,46 @@
+<%= form_with(model: event, local: true, html: { multipart: true}) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+        <div class="row align-center nombre_nuevo_evento">
+            <div class="columns large-5">
+                <%= form.text_field :name, id: :event_name, placeholder: "Nombre del evento" %>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="row align-center descripcion_nuevo_evento">
+            <div class="columns large-5">
+                <%= form.text_field :description, id: :event_description, placeholder: "Descripción del evento" %>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="row align-center imagen_nuevo_evento">
+            <div class="columns large-4">
+                    <%= form.file_field :avatar %>
+            </div>
+        </div>
+    </div>
+   
+    <div class="actions">
+        <div class="row align-center boton_nuevo_evento">
+            <div class="columns text-center large-4">
+                <%= form.submit "Crear evento", :class => "button primary" %>
+            </div>
+        </div>
+    </div>
+    
+<% end %>

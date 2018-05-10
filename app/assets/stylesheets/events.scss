@@ -1,0 +1,66 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.title_eventos h1 {
+	font-weight: bold;
+	color: gray;
+}
+
+.contenedor_eventos {
+	margin: 50px auto;
+}
+
+
+.eventos {
+	background-color: white;
+	border: 2px solid grey;
+	margin:20px 40px;
+	height: 100%;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 5px -5px 5px 0px gray;
+}
+
+.nombre_evento {
+	font-family: 'Coiny', cursive;
+	font-size: xx-large;
+	margin-bottom: 30px;	
+	color: orange;
+}
+
+.img_eventos, .descripcion_evento {
+	margin-bottom: 30px;
+}
+
+.batimovil {
+	height: 100px;
+}
+
+.batimovil_img {
+	padding-bottom: 15px;
+}
+
+.flipH {
+-moz-transform: scaleX(-1); /* Firefox */
+-o-transform: scaleX(-1); /* Opera */
+-webkit-transform: scaleX(-1); /* Chrome y Safari */
+transform: scaleX(-1); /* w3org */
+filter: FlipH; /* Internet Explorer */
+}
+
+.nuevo_evento {
+	margin: 50px auto;
+}
+
+.title_nuevo_evento, .titulo_nuevo_servicio {
+	margin: 50px auto 80px auto;
+}
+
+.nombre_nuevo_evento, .descripcion_nuevo_evento, .boton_nuevo_evento, .servicio_nuevo_nombre, .servicio_nueva_descripcion, .servicio_nuevo_valor {
+	margin-bottom: 20px;
+}
+
+.imagen_nuevo_evento, .servicio_nueva_imagen {
+	margin-bottom: 50px;
+}

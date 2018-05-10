@@ -1,0 +1,33 @@
+.title_contacto {
+	margin: 50px auto 100px auto;
+}
+
+.title_contacto h1 {
+	font-weight: bold;
+}
+
+.contenido_contacto {
+	margin-bottom: 18px;
+}
+
+.fa-mobile-phone:before, .fa-mobile:before, .fa-map-marker:before, .fa-whatsapp:before, .fa-facebook-square:before {
+	margin-right: 10px;
+}
+
+.contenido_der_contacto {
+	border-left: 2px solid gray;
+}
+
+.contenido_der_contacto h5 {
+	font-family: 'Handlee', cursive;
+	font-weight: bold;
+	font-size: xx-large;
+	color: green
+}
+
+.encargada {
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
+}
+

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class="field">
+      <%= image_tag @event.avatar.url(:medium) %>
+  </div>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

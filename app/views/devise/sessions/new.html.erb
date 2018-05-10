@@ -1,0 +1,54 @@
+<div class="row icono_login">
+    <div class="columns text-center large-12">
+        <i class="fa fa-user-circle icon" ></i>
+    </div>
+</div>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    
+    <div class="field">
+        <div class="row">
+            <div class="columns text-right large-4 icono_usuario">
+                <i class="fa fa-user fa-2x"></i>
+            </div>
+            <div class="columns large-4 field_usuario">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite su email" %>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="row">
+            <div class="columns text-right large-4 icono_contraseña">
+                <i class="fa fa-lock fa-2x"></i>
+            </div>
+            <div class="columns large-4">
+                <%= f.password_field :password, autocomplete: "off", placeholder: "Digite su contraseña" %>
+            </div>
+        </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+        <div class="field">
+            <div class="row">
+                <div class="columns text-center large-12">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me, "Recuerdame", :class => "recuerdame" %>
+                </div>
+            </div>
+        </div>
+    <% end -%>
+
+        <div class="actions">
+            <div class="row">
+                <div class="columns text-center large-12">
+                    <%= f.submit "Entrar", :class => "hollow button boton_login"%>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <div class="otros_login">
+    <%= render "devise/shared/links" %>
+    </div>

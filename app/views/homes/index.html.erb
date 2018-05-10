@@ -1,0 +1,122 @@
+<section class="logotipo">
+    <%= image_tag("logo.jpg", :alt => "gomelitos_img", :class => "logo") %>
+</section>
+<div class="fondo">
+<div class="row text-center nuestro_trabajo">
+	<div class="columns large-12"><h4>NUESTRO TRABAJO</h4></div>
+</div>
+<div class="row align-center orbit">
+	<div class="columns large-12 carrousel_peinados">
+		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+			  <div class="orbit-wrapper">
+			    <div class="orbit-controls">
+			      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+			      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+			    </div>
+			    <ul class="orbit-container">
+			      <li class="is-active orbit-slide">
+			        <figure class="orbit-figure">
+			          <%= image_tag("peinado1.jpg", :alt => "peinado1_img", :class => "peinado1") %>
+			          <figcaption class="orbit-caption">Peinado 1.</figcaption>
+			        </figure>
+			      </li>
+			      <li class="orbit-slide">
+			        <figure class="orbit-figure">
+			          <%= image_tag("peinado1.jpg", :alt => "peinado1_img", :class => "peinado1") %>
+			          <figcaption class="orbit-caption">Lets Rocket!</figcaption>
+			        </figure>
+			      </li>
+			      <li class="orbit-slide">
+			        <figure class="orbit-figure">
+			          <%= image_tag("peinado1.jpg", :alt => "peinado1_img", :class => "peinado1") %>
+			          <figcaption class="orbit-caption">Encapsulating</figcaption>
+			        </figure>
+			      </li>
+			      <li class="orbit-slide">
+			        <figure class="orbit-figure">
+			          <%= image_tag("peinado1.jpg", :alt => "peinado1_img", :class => "peinado1") %>
+			          <figcaption class="orbit-caption">Outta This World</figcaption>
+			        </figure>
+			      </li>
+			    </ul>
+			  </div>
+			  <nav class="orbit-bullets">
+			    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+			    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+			    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+			    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+			  </nav>
+		</div>
+			<%= image_tag("hombreAraña.png", :alt => "hombreAraña_img", :class => "hombreAraña") %>
+	</div>
+</div>  
+</div>
+<div class="fondo_robin">
+	<div class="row text-center nosotros_title">
+		<div class="columns large-12">
+			<h4>SOBRE NOSOTROS</h4>
+		</div>
+	</div>
+	<div class="row nosotros">
+		<div class="columns large-2"><%= image_tag("robin.png", :alt => "robin_img", :class => "robin") %></div>
+		<div class="columns large-10">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a metus at arcu scelerisque interdum eu sed enim. Donec et nibh condimentum, viverra tortor non, ultricies massa. Curabitur porttitor laoreet mi, at venenatis felis congue blandit. Vestibulum sodales dapibus gravida. Nunc vitae urna sed libero volutpat vulputate. Donec maximus gravida ex quis dignissim. Sed sollicitudin tristique facilisis. Mauris finibus ultricies lacus et tristique. Integer volutpat nisl sed orci lacinia, sed euismod nisl consectetur.
+			</p>
+		</div>
+	</div>
+</div>
+<div class="row horario_atencion">
+	<div class="columns text-center large-12 titulo_horario">
+		<h4>HORARIO DE ATENCIÓN</h4>
+	</div>
+	<div class="row align-bottom">
+		<div class="columns text-right large-4 semana_horario">
+			<p>Lunes a Viernes</p>
+			<br>
+			<p style="padding-right: 40px;">9am - 6pm</p>
+		</div>
+		<div class="columns text-center large-4 batman_horario">
+			<%= image_tag("batman.png", :alt => "batimovil_img", :class => "batman") %>
+		</div>
+		<div class="columns text-left large-4 sabado_horario">
+			<p style="padding-left: 5px;">Sabados </p>
+			<br>
+			<p>8am - 6pm</p>
+		</div>
+		<div class="columns text-center large-12 domingo_horario">
+			<p>Domingos y festivos se atienden por medio de citas separadas con anterioridad</p>
+		</div>
+
+	</div>
+</div>
+
+
+<div class="fondo_flash">
+	<div class="row align-bottom ubicanos">
+		<div class="columns text-center large-4">
+			<%= image_tag("flash.png", :alt => "flash_img", :class => "flash") %>
+		</div>
+		<div class="columns text-center large-4">
+			<h4>UBÍCANOS</h4>
+		</div>
+		<div class="columns text-center large-4">
+			<%= image_tag("flash.png", :alt => "flash_img", :class => "flash1") %>
+		</div>
+	</div>
+
+	<div class="row mapa">
+		<div class="columns text-center large-12">
+			<iframe
+			  width="800"
+			  height="430"
+			  border="solid 1px red"
+			  frameborder="0" style="border:0"
+			  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyB6QfZ00cuH16l1eW2EH7_xhX0Oy9O7vlU
+			    &location=4.5205568,-75.6986902
+			    &heading=-20
+			    &pitch=0
+			    &fov=50" allowfullscreen>
+			</iframe>
+		</div>
+	</div>
+</div>
