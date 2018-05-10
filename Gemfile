@@ -29,6 +29,7 @@ gem 'foundation-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'rspec', '~> 3.7'
 gem 'codecov', :require => false, :group => :test
+gem 'coveralls', require: false
 
 #agregada gema paperclip
 gem 'paperclip'
