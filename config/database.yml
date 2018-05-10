@@ -51,5 +51,4 @@ production:
   <<: *default
   database: SuperGomelitos_production
   username: SuperGomelitos
-  url: <%= ENV['DATABASE_URL']%>
   password: <%= ENV['SUPERGOMELITOS_DATABASE_PASSWORD'] %>
