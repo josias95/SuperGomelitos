@@ -12,7 +12,6 @@ gem 'rails', '~> 5.1.5'
 
 
 group :production do
-  gem 'pg', '~> 0.15.1'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
