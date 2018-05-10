@@ -18,5 +18,6 @@ after_failure:
 notifications:
    email:
     - jcubillosg@uqvirtual.edu.co
+    - jdtintinagop@uqvirtual.edu.co
    on_success: always 
    on_failure: always
