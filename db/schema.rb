@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180505001017) do
+ActiveRecord::Schema.define(version: 20180507221633) do
+
+  create_table "appointments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.date "fecha"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "horario"
+  end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
@@ -25,6 +32,15 @@ ActiveRecord::Schema.define(version: 20180505001017) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
+  create_table "has_services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.bigint "appointment_id"
+    t.bigint "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appointment_id"], name: "index_has_services_on_appointment_id"
+    t.index ["service_id"], name: "index_has_services_on_service_id"
+  end
+
   create_table "services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "nombre"
     t.text "descripcion"
@@ -36,6 +52,13 @@ ActiveRecord::Schema.define(version: 20180505001017) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer "categoria"
+  end
+
+  create_table "tracings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "descripcion"
+    t.integer "valor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -61,4 +84,6 @@ ActiveRecord::Schema.define(version: 20180505001017) do
   end
 
   add_foreign_key "events", "users"
+  add_foreign_key "has_services", "appointments"
+  add_foreign_key "has_services", "services"
 end
