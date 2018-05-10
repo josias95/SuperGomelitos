@@ -1,23 +1,26 @@
 language: ruby
 rvm:
 - 2.4.1
-env: 
+env:
 - RAILS_ENV=test
 before_script:
-- "mysql -e 'create database SuperGomelitos_test;'"
-- "cp ./.travis.database.yml ./config/database.yml"
-script: 
+- mysql -e 'create database SuperGomelitos_test;'
+- cp ./.travis.database.yml ./config/database.yml
+script:
 - bundle exec rake db:schema:load
 - bundle exec rake db:test:prepare
 - bundle exec rake spec
 after_failure:
-- "mysql -e 'show databases;'"
-- "cat ./config/database.yml"
-- "echo $RAILS_ENV"
-- "bundle exec rake --version"
-notifications:
+- mysql -e 'show databases;'
+- cat ./config/database.yml
+- echo $RAILS_ENV
+- bundle exec rake --version
+notifications: 
 email:
 - jcubillosg@uqvirtual.edu.co
 - jdtintinagop@uqvirtual.edu.co
-on_success: always 
+on_success: always
 on_failure: always
+deploy:
+  api_key:
+    secure: eK0gyjUkhjsk258mQxyw/loPj3hjX4QfPJcCyy0YyHEPgMkOjycBMEM7uhulVpru7V7FxuMhiaL5/gy59NAZwI/Sk2343zlAlTwTGzlsvtOVX+05JB0MOZo+hraEUlHpsx4+wkqTaqKybKdcPzpHfVJSGmdlf1/fuy27+AWwRojsoip2tC789o/L0v1EDW45cLQr/npuSQqfFhjW4imHF8bXXtj67IOcxivF5ArTcdjTPImIwXtdBVc7M6NO04AYhj7O5wizttEl5yKFF8gtKpJb41oz1F0lBHSwGRfKe/5CVYA+BoimEy6xeegS/1qApdsrnlCRdS6ByJCXUL8rhEo+wRt33mTAY8TL1T3jiNsu41HH/owmwDxYHm0CbS/dWrxTKBqz4zrqEa01oLptzeYkPHYY/xnAkjUUQV1675w1vbXyk+76/7WKUeXijI2mw/8LedChAQF2diOw4CPOJZhalhgjuWA0ASKtUaL8qN/6lPJTzTsE+J6BOnY0DngS8JrH3o0BET4W79vbsP8ociHN2w2ETELdRqn3siQSatIPlxE2Ns2GmAjtQPFZs4fMKKBkqaMPEjkMzO3vtpDaMJvuwGIj1wFVN4eebkp4oXq6n7x//BAmatN0Ky47lvtm23EuVdl21VPcRM5lIO5uZ3rxJDis2NSFdC0cow9agUQ=
