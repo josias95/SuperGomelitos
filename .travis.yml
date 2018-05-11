@@ -1,23 +1,23 @@
 language: ruby
 rvm:
-- 2.4.1
+  - 2.4.1
 env:
-- RAILS_ENV=test
+  - RAILS_ENV=test
 before_script:
-- mysql -e 'create database SuperGomelitos_test;'
-- cp ./.travis.database.yml ./config/database.yml
+  - mysql -e 'create database SuperGomelitos_test;'
+  - cp ./.travis.database.yml ./config/database.yml
 script:
-- bundle exec rake db:schema:load
-- bundle exec rake db:test:prepare
-- bundle exec rake spec
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+  - bundle exec rake spec
 after_failure:
-- mysql -e 'show databases;'
-- cat ./config/database.yml
-- echo $RAILS_ENV
-- bundle exec rake --version
+  - mysql -e 'show databases;'
+  - cat ./config/database.yml
+  - echo $RAILS_ENV
+  - bundle exec rake --version
 notifications: 
-email:
-- jcubillosg@uqvirtual.edu.co
-- jdtintinagop@uqvirtual.edu.co
-on_success: always
-on_failure: always
+  email:
+  - jcubillosg@uqvirtual.edu.co
+  - jdtintinagop@uqvirtual.edu.co
+  on_success: always
+  on_failure: always
