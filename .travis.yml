@@ -21,3 +21,8 @@ notifications:
   - jdtintinagop@uqvirtual.edu.co
   on_success: always
   on_failure: always
+deploy:
+  provider: heroku
+  api_key: ...
+  app: serene-thicket-94650
+  
