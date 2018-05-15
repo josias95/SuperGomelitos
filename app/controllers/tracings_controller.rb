@@ -1,6 +1,6 @@
 class TracingsController < ApplicationController
   before_action :set_tracing, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:index,:show, :new, :edit, :update, :destroy]
   # GET /tracings
   # GET /tracings.json
   def index
