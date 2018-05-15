@@ -25,6 +25,6 @@ deploy:
   provider: heroku
   api_key:
     secure: HaQuFXBTLRKk2lD7XSR6IRUhEh/STgLtnPU3ieui1zMx/0wEuK2a/bLMwY4LxNXIhHN55n0bJ2FriNQ695SIcgzk1oAVoSheQS1sEKQ+61kUzKzBsAKwkAG5zr6OuWYWKbhPFQiBunSTtFguAnneIB2+vNwDRpjXuH0O+Um+3O/TWl0/vrCkBjGjRTDMUyvzzC4nLLfcW+pQQja8lJFMFpkVuuu4LgesU0w0QbswhEC4wGxNohrLDdw7/h3cuV5CxdH2wU1/RE0QhNJs0+dy9+X+NMz7uhkYtorKl7EoFJ60+VYD41vrw4zeXzYugQBTjGVPW31adHuN3Pfytwe1URjCjlAgb72DRHGnqlOXycuD1U/CuAX+wn111hECBdOHAi1jJEBf82V7j4pe8sTjlOHLlggTB4crRaJQQHZOPFGBV1WkKuATAjxxlSc7WbQD4G9nZkrRTebqMcG2iRcNnEYelcN7TAAea5PwYOHokRwvNTT9P8LyiFwMor1BiNR9DOZ+7w0UyeC6sufUvo76ptOr3tsn+hLoMEM5imHYyE2G8KA9TCu9TNrVz4mtl1+/dPg7b2lp652I2pz5cuCJ9XwI2OK85nLO5LYLNnEb3WbBMzAicja5sqohgkj/pLQ3bDQpbNDUtaERRQcDr+oQTXIJKMHgTAIRLkH3i3qSLEg=
-  app: serene-thicket-94650
+  app: supergomelitos
   on: 
     repo: josias95/SuperGomelitos
