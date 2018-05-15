@@ -53,14 +53,14 @@ filter: FlipH; /* Internet Explorer */
 	margin: 50px auto;
 }
 
-.title_nuevo_evento {
+.title_nuevo_evento, .titulo_nuevo_servicio {
 	margin: 50px auto 80px auto;
 }
 
-.nombre_nuevo_evento, .descripcion_nuevo_evento, .boton_nuevo_evento {
+.nombre_nuevo_evento, .descripcion_nuevo_evento, .boton_nuevo_evento, .servicio_nuevo_nombre, .servicio_nueva_descripcion, .servicio_nuevo_valor {
 	margin-bottom: 20px;
 }
 
-.imagen_nuevo_evento {
+.imagen_nuevo_evento, .servicio_nueva_imagen {
 	margin-bottom: 50px;
 }

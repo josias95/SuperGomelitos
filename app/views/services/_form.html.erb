@@ -8,29 +8,62 @@
         <li><%= message %></li>
       <% end %>
       </ul>
-    </div>
+    </div>    
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :service_nombre %>
-  </div>
+    <div class="field">
+        <div class="row align-center servicio_nuevo_nombre">
+            <div class="columns large-5">
+                <%= form.text_field :nombre, id: :service_nombre, placeholder: "Nombre del servicio" %>
+            </div>
+        </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_area :descripcion, id: :service_descripcion %>
-  </div>
+    <div class="field">
+        <div class="row align-center servicio_nueva_descripcion">
+            <div class="columns large-5">
+                <%= form.text_area :descripcion, id: :service_descripcion, placeholder: "Descripción del servicio" %>
+            </div>
+        </div>
+    </div>  
 
-  <div class="field">
-    <%= form.label :valor %>
-    <%= form.number_field :valor, id: :service_valor %>
-  </div>
-
-  <div class="field">
-    <%= form.file_field :avatar %>
-  </div>  
   
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="field">
+        <div class="row align-center servicio_nuevo_valor">
+            <div class="columns large-5">
+                    <%= form.number_field :valor, id: :service_valor, placeholder: "Digite el valor" %>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="row align-center servicio_nueva_categoria">
+            <div class="columns large-5">
+                    <%= form.select :categoria, Service.categoria.keys, placeholder: "Seleccione una categoria" %>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="row align-center servicio_nueva_imagen">
+            <div class="columns large-4">
+                    <%= form.file_field :avatar %>
+            </div>
+        </div>
+    </div>
+   
+  
+    <div class="actions">
+        <div class="row align-center">
+            <div class="columns text-center large-4">
+                <%= form.submit "Crear servicio", :class => "button primary" %>
+            </div>
+        </div>
+    </div>
 <% end %>
+
+
+    
+
+    
+

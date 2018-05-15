@@ -9,7 +9,11 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+
+
+group :production do
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -25,7 +29,7 @@ gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'rspec', '~> 3.7'
-
+gem 'coveralls', require: false
 #agregada gema paperclip
 gem 'paperclip'
 gem 'remotipart', '~> 1.2'
@@ -44,6 +48,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -54,10 +59,10 @@ group :development, :test do
   
   gem 'rspec-rails'
   gem "factory_bot_rails"
-
 end
 
 group :development do
+  gem 'mysql2'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
