@@ -1,0 +1,65 @@
+<%= form_with(model: appointment, local: true) do |form| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="resultados">
+
+  </div>
+  <%= form_tag 'search/create', method: :get, remote: true do %>
+    <%= date_field_tag :keyword, nil%>
+    <%= content_tag :button, type: :submit do %>
+        Buscar
+    <% end %>
+  <% end %>
+
+  <div class="field">
+      <%= form.label :servicios %>
+      
+      <% @services.each do |service|%>
+          <% if service.categoria == "Bebes" %>
+          <%= form.label :bebes%>
+            <div class="field">
+              <%= check_box_tag "services[]", service.id %> <%= service.nombre %> -  <%= service.valor %>
+            </div>
+          <% end %>
+
+          <% if service.categoria == "Niños" %>
+          <%= form.label :Niños %>
+            <div class="field">
+              <%= check_box_tag "services[]", service.id %> <%= service.nombre%>  -  <%= service.valor %>
+            </div>
+          <% end %>
+
+          
+          <% if service.categoria == "Adultos" %>
+          <%= form.label :Adultos %>
+            <div class="field">
+              <%= check_box_tag "services[]", service.id %> <%= service.nombre %> -  <%= service.valor %>
+            </div>
+          <% end %>
+      <% end %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha, id: :appointment_fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horario %>
+    <%= form.select :horario, Appointment.horarios.keys %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
