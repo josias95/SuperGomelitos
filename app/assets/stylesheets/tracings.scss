@@ -1,3 +1,23 @@
 // Place all the styles related to the Tracings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+	width: 100%;
+}
+
+th {
+	background-color: #224267;
+	color: white;
+	padding: 10px;
+	text-align: center !important;
+}
+
+td {
+	padding: 20px;
+}
+
+table, td , th {
+	border: 1px double #224267;
+	border-collapse: initial;
+}
