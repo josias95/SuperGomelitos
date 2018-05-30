@@ -206,5 +206,9 @@
 
 <br>
 <% if user_signed_in? %>
-<%= link_to 'New Service', new_service_path %>
+<div class="row">
+    <div class="columns text-center large-12">
+      <%= link_to 'New Service', new_service_path, class: "hollow button success" %>  
+    </div>
+</div>
 <% end -%>  
